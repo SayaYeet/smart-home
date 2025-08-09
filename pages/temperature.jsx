@@ -4,7 +4,7 @@ export default function Temperature() {
   const [temperature, setTemperature] = useState(null);
 
   useEffect(() => {
-    fetch("https://Sayayay.pythonanywhere.com/temperature")
+    fetch("https://sayayay.pythonanywhere.com/temperature")
       .then(res => res.json())
       .then(data => setTemperature(data["temperature in your house"]))
       .catch(err => console.error("You messed up code is: ", err));
